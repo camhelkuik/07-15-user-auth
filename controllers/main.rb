@@ -17,3 +17,7 @@ end
 get "/delete_menu" do
   erb :"main/delete_menu"
 end
+
+get "/login_menu" do
+  erb :"main/login_menu"
+end
