@@ -11,4 +11,6 @@ departure_info TEXT, arrival_info TEXT, hotel_info TEXT, check_in_time TEXT);")
 
 CONNECTION.execute("CREATE TABLE IF NOT EXISTS locations (id INTEGER PRIMARY KEY, city TEXT, state TEXT, address TEXT, longitude REAL, latitude REAL);")
 
+CONNECTION.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, email TEXT, password TEXT);")
+
 CONNECTION.results_as_hash = true
