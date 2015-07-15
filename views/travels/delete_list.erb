@@ -1,0 +1,24 @@
+<h2 class= centered>Click the travel plans you wish to delete:</h2>
+
+ <table class= centered>
+   <tr>
+     <th>ID</th>
+     <th>Event Name</th>
+     <th>City</th>
+     <th>Event Date</th>
+   </tr>
+ <% @travel.each do |travel| %>
+   <tr>
+     <td>
+       <a href="/view_travel/<%= travel["id"] %>"> 
+         <%= travel["id"] %>
+       </a>
+     </td>
+     <td><%= travel["name"] %></td>
+     <td><%= travel["city"] %></td>
+     <td><%= travel["event_date"] %></td>
+   </tr>
+   <% end %>
+ </table>
+  
+ 

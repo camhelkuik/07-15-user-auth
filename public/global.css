@@ -1,0 +1,127 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  color: white;
+}
+
+body p {
+  font-family: Rokkit;
+  font-size: 25px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.centered {
+  text-align: center;
+}
+
+#menu {
+  width: 300px;
+  height: 180px;
+  background-color: coral;
+  z-index: 1000;
+  position: fixed;
+  left: 68px;
+}
+
+#menu a {
+  color: white;
+}
+
+#menu li {
+  border-style: solid;
+  border-top: thin double teal;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+#menu ul {
+  list-style-type: none;
+  padding-left: 0px;
+  font-size: 33px;
+  margin-top: 14px;
+}
+
+#menu-bar{
+  background-color: coral;
+}
+  
+@media (min-width: 800px) {
+#menu ul {
+  font-size: 21px;
+  margin-bottom: 0px;
+}
+
+#menu {
+  left: 0px;
+  height: auto;
+  position: relative;
+  top: 0px;
+  float: left;
+  width: 20%;
+  display: block;
+}
+
+#menu-bar{
+  display: none;
+}
+  
+.main {
+  float: left;
+  width: 80%;
+}
+}
+
+.background1 {
+background-color: teal;
+}
+
+a:link {
+text-decoration: none;
+color: #000000;
+}
+
+a:visited {
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+a:active {
+text-decoration: underline;
+}
+
+div {
+padding: 10px;
+text-size: 30px;
+}
+
+table, th, td {
+border: 1px solid #6C5A80;
+background-color: #EEEAE2;
+width: 450px;
+text-align: center;
+margin: 10px;
+}
+
+th {
+background-color: #6C5A80;
+}
+
+.field_error{
+border-color: red;
+}
+
+.hide {
+  display: none;
+}

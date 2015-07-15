@@ -1,0 +1,21 @@
+<h2 class= centered>Here are your locations in alphabetical order by City:</h2>
+
+
+<table class= centered>
+  <tr>
+    <th>ID</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Address</th>
+  </tr>
+  <% Location.sorted.each do |location| %>
+  <tr>
+    <td><%= location.id %></td>
+    <td><%= location.city %></td>
+    <td><%= location.state %></td>
+    <td><%= location.address %></td>
+  </tr>
+  <% end %>
+</table>
+
+<div class= centered><a href="/home">Main Menu</a></div>

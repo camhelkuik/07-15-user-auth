@@ -1,0 +1,60 @@
+<h2 class= centered>Click the application you would like to delete:</h2>
+
+<table class= centered>
+  <tr>
+    <th>ID</th>
+    <th>Event Id</th>
+    <th>Application Fee</th>
+    <th>Event Fee</th>
+    <th>Submitted?</th>
+    <th>Accepted?</th>
+    <th>Due Date</th>
+    <th>Location Id</th>
+    <th>Application Details</th>  
+  </tr>
+  <% Application.all_sorted_by_date.each do |app| %>
+  <tr>
+    <td>
+      <a href="/delete_app/<%= app.id %>">
+        <%= app.id %>
+      </a>
+    </td>
+    <td><%= app.events_id %></td>
+    <td><%= app.application_fee %></td>
+    <td><%= app.event_fee %></td>
+    <td><%= app.submitted %></td>
+    <td><%= app.accepted %></td>
+    <td><%= app.due_date %></td>
+    <td><%= app.locations_id %></td>
+    <td><%= app.application_details %></td>
+  </tr>
+  <% end %>
+</table>
+
+  <h3 class= centered>Event List</h3>
+  <table class= centered>
+    <tr>
+      <th>ID</th>
+      <th>Event Name</th>
+      <th>Application ID</th>
+      <th>Event Date</th>
+      <th>Check In Time</th>
+      <th>Location Id</th>
+      <th>Ammenities</th>
+      <th>Contact Email</th>
+      <th>Contact Phone</th>  
+    </tr>
+    <% Event.all_sorted_by_date.each do |event| %>
+    <tr>
+      <td><%= event.id %></td>
+      <td><%= event.name %></td>
+      <td><%= event.applications_id %></td>
+      <td><%= event.event_date %></td>
+      <td><%= event.check_in_time %></td>
+      <td><%= event.locations_id %></td>
+      <td><%= event.ammenities %></td>
+      <td><%= event.contact_email %></td>
+      <td><%= event.contact_phone %></td>
+    </tr>
+    <% end %>
+  </table>

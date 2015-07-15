@@ -1,0 +1,23 @@
+<h2 class= centered>Click the location you would like to delete:</h2>
+
+<h3 class= centered>Location List</h3>
+<table class= centered>
+  <tr>
+    <th>ID</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Address</th>
+  </tr>
+  <% Location.sorted.each do |location| %>
+  <tr>
+    <td>
+      <a href="/delete_location/<%= location.id %>">
+        <%= location.id %>
+      </a>
+    </td>
+    <td><%= location.city %></td>
+    <td><%= location.state %></td>
+    <td><%= location.address %></td>
+  </tr>
+  <% end %>
+</table>
