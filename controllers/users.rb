@@ -3,8 +3,10 @@ get "/sign_up" do
 end
 
 get "/save_sign_up" do
-  
-  
+  the_password = BCrypt::Password.create(params["password"])
+  new_user = User.add({"email" => params["email"], "password" => the_password})
+  binding.pry
+  new_user.save  
 end
 
 get "/login" do
@@ -12,5 +14,19 @@ get "/login" do
 end
 
 get "/verify_login" do
-  
+  attempted_password = params["password"]
+  user = User.search_row("email", params["email"])
+
+  # Assuming there is a user with the given email address...
+  # Make a new BCrypt object with the **password from the database**.
+  actual_password = BCrypt::Password.new(user.password)
+
+  # So, an example:
+  # actual_password = BCrypt::Password.new("$2a$10$87jFZs7pY2Fh33HR.lA9ouVLzevh45esv0UjdYF/b1jOGKC.YtfG2")
+
+  if actual_password == attempted_password
+    erb :"password_success"
+  else
+    erb :"/login/login_form"
+  end
 end
