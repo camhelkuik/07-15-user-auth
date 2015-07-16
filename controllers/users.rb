@@ -5,7 +5,6 @@ end
 get "/save_sign_up" do
   the_password = BCrypt::Password.create(params["password"])
   new_user = User.add({"email" => params["email"], "password" => the_password})
-  binding.pry
   new_user.save  
 end
 

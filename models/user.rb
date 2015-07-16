@@ -21,7 +21,7 @@ class User
   #
   # Returns self, an object.
   def save
-    CONNECTION.execute("UPDATE users SET email = #{self.email}, password = #{self.password} WHERE id = #{self.id};")
+    CONNECTION.execute("UPDATE users SET email = '#{self.email}', password = '#{self.password}' WHERE id = #{self.id};")
      
      return self
   end
