@@ -4,6 +4,8 @@ require "sinatra/reloader"
 require 'active_support/core_ext/object/blank'
 require "bcrypt"
 
+set :sessions, true
+
 #SQL/databse
 require "sqlite3"
 require_relative "database_setup.rb"
