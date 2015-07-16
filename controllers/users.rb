@@ -6,6 +6,8 @@ get "/save_sign_up" do
   the_password = BCrypt::Password.create(params["password"])
   new_user = User.add({"email" => params["email"], "password" => the_password})
   new_user.save  
+  
+  erb :"/login/password_success"
 end
 
 get "/login" do
