@@ -1,10 +1,9 @@
 require "pry"
 require "sinatra"
+set :sessions, true
 require "sinatra/reloader"
 require 'active_support/core_ext/object/blank'
 require "bcrypt"
-
-set :sessions, true
 
 #SQL/databse
 require "sqlite3"

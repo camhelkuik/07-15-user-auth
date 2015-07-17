@@ -31,3 +31,8 @@ get "/verify_login" do
     erb :"/login/login_form"
   end
 end
+
+get "/logout" do
+  session.clear
+  redirect "/home"
+end
